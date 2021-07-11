@@ -15,7 +15,6 @@ public class SantaParams : MonoBehaviour
 
     void Update()
     {
-        
         if (!flag && Physics.Raycast(transform.position, new Vector3(1, 0, 0), 10f))
         {
             flag = true;

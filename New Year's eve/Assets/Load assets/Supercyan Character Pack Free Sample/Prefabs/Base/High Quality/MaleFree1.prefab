@@ -1386,4 +1386,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dissatisfaction: 20
   power: 10
-  speed: 2
+  speed: 1

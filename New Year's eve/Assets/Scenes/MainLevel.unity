@@ -732,6 +732,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1475339451434976, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1475716869458680, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -875,10 +879,6 @@ PrefabInstance:
     - target: {fileID: 544635751006411068, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
       propertyPath: children.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6755776673010545294, guid: bde7b389ddf0f884bb02f5a01b9798b4, type: 3}
-      propertyPath: fireSpeed
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

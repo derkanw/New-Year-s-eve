@@ -11,6 +11,11 @@ public class ChildParams : MonoBehaviour
     {
         if (collider.name == "Gift 3(Clone)")
             dissatisfaction -= collider.gameObject.GetComponent<GiftParams>().firePower;
+        if (collider.name == "house")
+        {
+            print("Game Over!");
+            Destroy(gameObject);
+        }
     }
 
     void Start()
