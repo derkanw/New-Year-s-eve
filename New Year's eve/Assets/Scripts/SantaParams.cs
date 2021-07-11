@@ -20,8 +20,6 @@ public class SantaParams : MonoBehaviour
             flag = true;
             StartCoroutine(InitGift());
         }
-        if (hp == 0)
-            Destroy(gameObject);
     }
 
     void OnTriggerEnter(Collider collider)
@@ -32,6 +30,8 @@ public class SantaParams : MonoBehaviour
             hp -= child.power;
             child.dissatisfaction = 0;
         }
+        if (hp == 0)
+            Destroy(gameObject);
     }
 
     IEnumerator InitGift()

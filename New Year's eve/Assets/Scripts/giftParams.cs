@@ -8,7 +8,7 @@ public class GiftParams : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.name != "mainSanta")
+        if (collider.name != "Meshtint Free Santa Claus(Clone)")
             Destroy(gameObject);
     }
 

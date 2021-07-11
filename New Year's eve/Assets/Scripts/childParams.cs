@@ -16,6 +16,8 @@ public class ChildParams : MonoBehaviour
             print("Game Over!");
             Destroy(gameObject);
         }
+        if (dissatisfaction == 0)
+            Destroy(gameObject);
     }
 
     void Start()
@@ -25,7 +27,6 @@ public class ChildParams : MonoBehaviour
 
     void Update()
     {
-        if (dissatisfaction == 0)
-            Destroy(gameObject);
+
     }
 }

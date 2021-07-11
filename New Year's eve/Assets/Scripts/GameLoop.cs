@@ -19,7 +19,6 @@ public class GameLoop : MonoBehaviour
                 if (!(i >= -width + 2 && j >= -height + 2 && j < height - 2))
                     Destroy(part.GetComponent<Ground>());
             }
-
     }
     
     void Start()
