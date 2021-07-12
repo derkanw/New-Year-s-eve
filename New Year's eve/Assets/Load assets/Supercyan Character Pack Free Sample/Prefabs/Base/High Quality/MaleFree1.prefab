@@ -1316,7 +1316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968476592218994}
   m_LocalRotation: {x: 0, y: 0.9238796, z: -0, w: -0.38268325}
-  m_LocalPosition: {x: 0.83620834, y: -4.8999796e-19, z: 1.7654036}
+  m_LocalPosition: {x: 0.83620834, y: 0, z: 1.7654036}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4447174194096642}
@@ -1387,3 +1387,4 @@ MonoBehaviour:
   dissatisfaction: 20
   power: 10
   speed: 1
+  barPrefab: {fileID: 3159413077708130292, guid: 35ee18e70fb99ce4882a0fe70964eb07, type: 3}
