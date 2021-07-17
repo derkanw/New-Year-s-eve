@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ChildParams : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class ChildParams : MonoBehaviour
         }
         if (collider.name == "house")
         {
-            print("Game Over!");
+            SceneManager.LoadScene("Scenes/GameOver");
             Destroy(gameObject);
         }
         if (dissatisfaction == 0)
