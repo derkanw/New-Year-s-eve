@@ -7,15 +7,15 @@ public class ChildParams : MonoBehaviour
 {
     public int dissatisfaction, power;
     public float speed;
-    public GameObject barPrefab;
-    private GameObject bar;
+    private Slider bar;
+    private int cost = 20;
 
     void OnTriggerEnter(Collider collider)
     {
         if (collider.name == "Gift 3(Clone)")
         {
             dissatisfaction -= collider.gameObject.GetComponent<GiftParams>().firePower;
-            bar.gameObject.transform.GetChild(0).GetComponent<Slider>().value = dissatisfaction;
+            bar.value = dissatisfaction;
         }
         if (collider.name == "house")
         {
@@ -23,16 +23,18 @@ public class ChildParams : MonoBehaviour
             Destroy(gameObject);
         }
         if (dissatisfaction == 0)
+        {
+            GameObject.Find("Gold").GetComponent<GoldParams>().gold += cost;
             Destroy(gameObject);
+        }
     }
 
     void Start()
     {
         GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 0) * speed;
-        bar = Instantiate(barPrefab, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
-        print(bar.name);
-        bar.gameObject.transform.GetChild(0).GetComponent<Slider>().maxValue = dissatisfaction;
-        bar.gameObject.transform.GetChild(0).GetComponent<Slider>().value = dissatisfaction;
+        bar = gameObject.transform.GetChild(2).transform.GetChild(0).GetComponent<Slider>();
+        bar.maxValue = dissatisfaction;
+        bar.value = dissatisfaction;
     }
 
     void Update()

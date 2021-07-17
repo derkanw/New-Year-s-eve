@@ -7,17 +7,23 @@ public class Ground : MonoBehaviour
     public GameObject santaPrefab;
     public float santaPeriod;
     public int maxSantas;
+    private int cost = 15;
+    private GoldParams goldParams;
 
     void OnMouseDown()
     {
         int count = GameObject.FindGameObjectsWithTag("Santa").Length;
-        if (count < maxSantas)
+        if (count < maxSantas && goldParams.gold >= cost)
+        {
+            goldParams.gold -= cost;
             Instantiate(santaPrefab, transform.position, santaPrefab.transform.rotation);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        goldParams = GameObject.Find("Gold").GetComponent<GoldParams>();
     }
 
     // Update is called once per frame

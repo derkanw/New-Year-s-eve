@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class SantaParams : MonoBehaviour
 {
@@ -8,9 +10,13 @@ public class SantaParams : MonoBehaviour
     public float fireSpeed;
     public int hp;
     private bool flag = false;
+    private Slider bar;
 
     void Start()
     {
+        bar = gameObject.transform.GetChild(5).transform.GetChild(0).GetComponent<Slider>();
+        bar.maxValue = hp;
+        bar.value = hp;
     }
 
     void Update()
@@ -28,6 +34,7 @@ public class SantaParams : MonoBehaviour
         {
             ChildParams child = collider.gameObject.GetComponent<ChildParams>();
             hp -= child.power;
+            bar.value = hp;
             child.dissatisfaction = 0;
         }
         if (hp == 0)

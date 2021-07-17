@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class GameLoop : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class GameLoop : MonoBehaviour
     public float distance;
     public GameObject childPrefab, grassPrefab;
     private int width = 10, height = 5;
+    private Text wave;
 
     void Awake()
     {
@@ -23,6 +26,8 @@ public class GameLoop : MonoBehaviour
     
     void Start()
     {
+        wave = GameObject.Find("Wave").GetComponent<Text>();
+        wave.text = "Wave: ";
         StartCoroutine(InitWave());
     }
 
@@ -45,6 +50,7 @@ public class GameLoop : MonoBehaviour
         for (int i = 0; i < waveCount; ++i)
         {
             StartCoroutine(InitChildren());
+            wave.text = "Wave: " + (i + 1).ToString();
             yield return new WaitForSeconds(wavePeriod);
         }
     }
