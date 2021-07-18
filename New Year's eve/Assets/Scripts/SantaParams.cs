@@ -8,7 +8,7 @@ public class SantaParams : MonoBehaviour
 {
     public GameObject prefab;
     public float fireSpeed;
-    public int hp;
+    public int hp, level, cost, upgradeCost;
     private bool flag = false;
     private Slider bar;
 

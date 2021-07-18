@@ -629,6 +629,9 @@ MonoBehaviour:
   prefab: {fileID: 192700, guid: 9675245c4464bf74ebc4eac2ed9a24e7, type: 3}
   fireSpeed: 3
   hp: 10
+  level: 1
+  cost: 15
+  upgradeCost: 30
 --- !u!1 &1475716869458680
 GameObject:
   m_ObjectHideFlags: 0

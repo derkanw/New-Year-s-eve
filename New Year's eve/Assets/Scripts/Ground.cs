@@ -7,7 +7,7 @@ public class Ground : MonoBehaviour
     public GameObject santaPrefab;
     public float santaPeriod;
     public int maxSantas;
-    private int cost = 15;
+    private int cost;
     private GoldParams goldParams;
 
     void OnMouseDown()
@@ -23,6 +23,7 @@ public class Ground : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cost = santaPrefab.GetComponent<SantaParams>().cost;
         goldParams = GameObject.Find("Gold").GetComponent<GoldParams>();
     }
 

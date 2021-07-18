@@ -12,7 +12,7 @@ public class MenuManager : MonoBehaviour
     }
     public void OnStoreButton()
     {
-        print(2);
+        SceneManager.LoadScene("Scenes/Store");
     }
     public void OnExitButton()
     {
