@@ -32,7 +32,6 @@ public class ChildParams : MonoBehaviour
 
     void Start()
     {
-        GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 0) * speed;
         bar = gameObject.transform.GetChild(2).transform.GetChild(0).GetComponent<Slider>();
         bar.maxValue = dissatisfaction;
         bar.value = dissatisfaction;

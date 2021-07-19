@@ -30,7 +30,7 @@ public class SantaParams : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.name == "MaleFree1(Clone)")
+        if (collider.name == "MaleFreeSimpleMovement1(Clone)")
         {
             ChildParams child = collider.gameObject.GetComponent<ChildParams>();
             hp -= child.power;
