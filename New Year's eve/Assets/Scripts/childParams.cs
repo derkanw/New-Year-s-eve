@@ -8,6 +8,7 @@ public class ChildParams : MonoBehaviour
 {
     public int dissatisfaction, power;
     public float speed;
+    private Rigidbody rigidBody;
     private Slider bar;
     private int cost = 20;
 
@@ -35,10 +36,16 @@ public class ChildParams : MonoBehaviour
         bar = gameObject.transform.GetChild(2).transform.GetChild(0).GetComponent<Slider>();
         bar.maxValue = dissatisfaction;
         bar.value = dissatisfaction;
+
+        Animator animator = gameObject.GetComponent<Animator>();
+        animator.SetBool("Grounded", true);
+        animator.SetFloat("MoveSpeed", speed);
+
+        rigidBody = gameObject.GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-
+        rigidBody.velocity = new Vector3(-1, 0, 0) * speed;
     }
 }
