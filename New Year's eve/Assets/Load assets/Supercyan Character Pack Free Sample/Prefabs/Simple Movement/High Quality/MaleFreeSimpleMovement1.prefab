@@ -1049,8 +1049,6 @@ MonoBehaviour:
   dissatisfaction: 20
   power: 10
   speed: 1.5
-  animator: {fileID: 95665039525092722}
-  rigidBody: {fileID: 54084939265967506}
 --- !u!65 &3457909625730246494
 BoxCollider:
   m_ObjectHideFlags: 0
